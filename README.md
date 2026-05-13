@@ -47,9 +47,8 @@ The goal of this project was to determine when the most intense sustained rainfa
 
 
 ## NOAA Atlas 14 Rainfall Frequency Reference
-![NOAA Atlas](noaa_atlas.jpg)
+noaa_atlas.jpg
 
 
 ## Event Rainfall Totals Reference
-![Rainfall Totals](Rainfall Total.jpg)
 
