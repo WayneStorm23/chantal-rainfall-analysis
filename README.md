@@ -61,8 +61,5 @@ The goal of this project was to determine when the most intense sustained rainfa
 
 ![Rainfall Totals](rainfall_total.jpg)
 
-
-
-
 ## Event Rainfall Totals Reference
 
