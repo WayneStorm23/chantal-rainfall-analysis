@@ -43,20 +43,13 @@ The goal of this project was to determine when the most intense sustained rainfa
 # Final Visualizations
 
 ## Python Rainfall Analysis Visualization
-
-![Rainfall Graph](chantal_rainfall_graph.png)
-
+![Rainfall Totals](rainfall_total.jpg)
 
 
 ## NOAA Atlas 14 Rainfall Frequency Reference
-*Reference graphic from NOAA Atlas 14 used for rainfall frequency and ARI comparison.*
-
-![NOAA Atlas](NOAA Atlas.jpg)
-
+![NOAA Atlas](noaa_atlas.jpg)
 
 
 ## Event Rainfall Totals Reference
-*Reference rainfall-total visualization used for broader storm context.*
-
 ![Rainfall Totals](Rainfall Total.jpg)
 
