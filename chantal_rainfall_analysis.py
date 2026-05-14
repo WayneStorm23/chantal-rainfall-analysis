@@ -1,13 +1,8 @@
 """
+
 Tropical Storm Chantal Rainfall Analysis
 Wayne Morley
 
-This project analyzes high-frequency USGS precipitation
-observations near Chapel Hill, NC during Tropical Storm Chantal.
-
-The script identifies the maximum rolling 6-hour rainfall
-accumulation, computes rainfall intensity metrics, and visualizes
-the temporal evolution of the event using Matplotlib.
 """
 
 
