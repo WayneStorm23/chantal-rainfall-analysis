@@ -5,7 +5,6 @@ Wayne Morley
 
 """
 
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -16,41 +15,33 @@ df = pd.read_csv(
     parse_dates=["datetime"]
 )
 
-# Calculate cumulative rainfall
-# Added 0.53" baseline from earlier rainfall already on gauge
+# Cumulative rainfall
+# Includes 0.53" already in the gauge before the main event
 df["cumulative"] = df["precip_in"].cumsum() + 0.53
 
-# Calculate rolling 6-hour rainfall totals
-# 24 rows × 15-minute observations = 6 hours
+# Rolling 6-hour rainfall totals
 df["6hr_total"] = df["precip_in"].rolling(window=24).sum()
 
-# Find wettest 6-hour period
+# Wettest 6-hour rainfall window
 idx = df["6hr_total"].idxmax()
 
 peak = df.loc[idx, "6hr_total"]
 
-# These timestamps are included in the rolling sum
-window_start_timestamp = df.loc[idx - 23, "datetime"]
-window_end = df.loc[idx, "datetime"]
-
-# Actual rainfall window starts 15 minutes earlier
-# because each timestamp represents rainfall during
-# the PREVIOUS 15-minute interval
-actual_window_start = (
-    window_start_timestamp
+window_start = (
+    df.loc[idx - 23, "datetime"]
     - pd.Timedelta(minutes=15)
 )
+window_end = df.loc[idx, "datetime"]
 
-# Plot style
+# Plot setup
 plt.style.use("dark_background")
 
-# Create figure
 fig, ax = plt.subplots(
     figsize=(12, 6),
     facecolor="black"
 )
 
-# Plot cumulative rainfall line
+# Plot cumulative rainfall
 ax.plot(
     df["datetime"],
     df["cumulative"],
@@ -59,24 +50,22 @@ ax.plot(
     zorder=2
 )
 
-# Highlight wettest 6-hour rainfall window
+# Highlight wettest 6-hour window
 ax.axvspan(
-    actual_window_start,
+    window_start,
     window_end,
     color="gold",
     alpha=0.30,
     zorder=1
 )
 
-# Add annotation box
+# Annotation
 ax.text(
-    actual_window_start +
-    (window_end - actual_window_start) / 2,
-
+    window_start + (window_end - window_start) / 2,
     df["cumulative"].min() + 1,
 
     f'{peak:.2f}" in 6 hrs\n'
-    f'({actual_window_start.strftime("%H:%M")}–'
+    f'({window_start.strftime("%H:%M")}–'
     f'{window_end.strftime("%H:%M")} EDT)',
 
     ha="center",
@@ -135,7 +124,7 @@ ax.set_title(
     pad=15
 )
 
-# Grid styling
+# Grid
 ax.grid(
     True,
     linestyle=":",
@@ -144,7 +133,7 @@ ax.grid(
     zorder=0
 )
 
-# Author credit
+# Credit
 fig.text(
     0.02,
     0.98,
@@ -162,21 +151,11 @@ plt.tight_layout()
 plt.show()
 
 # Verification output
-print(
-    f"Wettest 6-hour total: "
-    f"{peak:.2f} inches"
-)
+print(f"Wettest 6-hour total: {peak:.2f} inches")
 
 print(
-    f"Timestamps summed: "
-    f"{window_start_timestamp.strftime('%Y-%m-%d %H:%M')} "
-    f"to "
-    f"{window_end.strftime('%Y-%m-%d %H:%M')} EDT"
-)
-
-print(
-    f"Actual rainfall window represented: "
-    f"{actual_window_start.strftime('%Y-%m-%d %H:%M')} "
+    f"Wettest rainfall window: "
+    f"{window_start.strftime('%Y-%m-%d %H:%M')} "
     f"to "
     f"{window_end.strftime('%Y-%m-%d %H:%M')} EDT"
 )
