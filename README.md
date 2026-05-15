@@ -3,6 +3,15 @@ Python-based rainfall analysis and visualization of Tropical Storm Chantal using
 
 # Tropical Storm Chantal Rainfall Analysis
 
+## Event Overview
+
+Tropical Storm Chantal was the first tropical system of the 2025 Atlantic hurricane season to significantly impact North Carolina, producing widespread flooding rainfall across portions of the Piedmont and Sandhills.
+
+Although Chantal was not an especially strong or long-lived tropical cyclone, its slow movement and deep Atlantic moisture led to significant hydrologic impacts after landfall in South Carolina on July 6, 2025. The heaviest rainfall occurred near and just west of the remnant low-pressure track across central North Carolina.
+
+Multiple observing stations across Orange, Chatham, Moore, and Alamance counties recorded more than 7 inches of rainfall, with localized totals exceeding 10 inches. Several rivers reached major flood stage, including portions of the Haw River and Eno River basins, with some gauges approaching or exceeding historical flood crests associated with Hurricane Fran (1996).
+
+
 ## Project Overview
 
 This project analyzes high-frequency precipitation observations collected near Chapel Hill, NC during Tropical Storm Chantal. Using Python, Pandas, Excel, and Matplotlib, I analyzed rainfall intensity, cumulative precipitation, and rolling 6-hour rainfall totals to identify the most extreme short-duration rainfall period associated with the storm.
