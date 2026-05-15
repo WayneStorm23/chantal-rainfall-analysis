@@ -22,13 +22,6 @@ This project analyzes high-frequency precipitation observations collected near C
 
 The goal of this project was to determine when the most intense sustained rainfall occurred during Tropical Storm Chantal, visualize how rainfall evolved through time using observational rain gauge data, and compare the event against NOAA Atlas 14 rainfall frequency guidance to assess the rarity and significance of the event.
 
-## Data Sources
-
- USGS high-frequency rain gauge observations
- NOAA Atlas 14 rainfall frequency guidance
- Iowa State Mesonet 
-
-
 
 ## Methodology
 
@@ -47,6 +40,11 @@ The goal of this project was to determine when the most intense sustained rainfa
  Peak rainfall rates exceeded 3 inches per hour during the event's most intense tropical rainbands
  NOAA Atlas 14 estimates suggested the event approached a 200–500-year rainfall recurrence interval
 
+## Data Sources
+
+ USGS high-frequency rain gauge observations
+ NOAA Atlas 14 rainfall frequency guidance
+ Iowa State Mesonet 
 
 
 # Final Visualizations
