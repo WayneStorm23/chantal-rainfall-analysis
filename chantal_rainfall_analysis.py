@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-# Read CSV file
+# CSV file
 df = pd.read_csv(
     "usgs_precip_data.csv",
     parse_dates=["datetime"]
