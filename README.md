@@ -25,26 +25,26 @@ The goal of this project was to determine when the most intense sustained rainfa
 
 ## Methodology
 
- Processed 15-minute precipitation observations using Excel and Python
- Calculated cumulative rainfall totals to visualize storm evolution
- Converted rainfall observations into hourly-equivalent rainfall rates
- Performed rolling 6-hour accumulation analysis to identify the peak short-duration rainfall window
- Created a rainfall visualization using Matplotlib
+- Processed 15-minute precipitation observations using Excel and Python
+- Calculated cumulative rainfall totals to visualize storm evolution
+- Converted rainfall observations into hourly-equivalent rainfall rates
+- Performed rolling 6-hour accumulation analysis to identify the peak short-duration rainfall window
+- Created a rainfall visualization using Matplotlib
 
 
 
 ## Key Findings
 
- Over 7 inches of rainfall fell during Tropical Storm Chantal
- A peak 6-hour rainfall accumulation of 6.66 inches occurred between 4 PM and 10 PM EDT
- Peak rainfall rates exceeded 3 inches per hour during the event's most intense tropical rainbands
- NOAA Atlas 14 estimates suggested the event approached a 200–500-year rainfall recurrence interval
-
+- Over 7 inches of rainfall fell during Tropical Storm Chantal
+- A peak 6-hour rainfall accumulation of 6.66 inches occurred between 4 PM and 10 PM EDT
+- Peak rainfall rates exceeded 3 inches per hour during the event's most intense tropical rainbands
+- NOAA Atlas 14 estimates suggested the event approached a 200–500-year rainfall recurrence interval
+  
 ## Data Sources
 
- USGS high-frequency rain gauge observations
- NOAA Atlas 14 rainfall frequency guidance
- Iowa State Mesonet 
+- USGS high-frequency rain gauge observations
+- NOAA Atlas 14 rainfall frequency guidance
+- Iowa State Mesonet 
 
 
 # Final Visualizations
